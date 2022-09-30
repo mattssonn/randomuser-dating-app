@@ -34,12 +34,7 @@ async function getData() {
   age.innerText = data.results[0].dob.age;
   number.innerText = data.results[0].cell;
 
-  if (
-    data.results[0].name.title === "Ms" ||
-    data.results[0].name.title === "Miss" ||
-    data.results[0].name.title === "Mrs" ||
-    data.results[0].name.title === "Mademoiselle"
-  ) {
+  if (data.results[0].gender === "female") {
     content.style.backgroundColor = "pink";
   } else {
     content.style.backgroundColor = "#0D4F8B";
